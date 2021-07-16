@@ -9,4 +9,4 @@ var connection = mysql.createPool({
   waitForConnections: true,
 });
 
-module.exports = connection
+module.exports = connection;

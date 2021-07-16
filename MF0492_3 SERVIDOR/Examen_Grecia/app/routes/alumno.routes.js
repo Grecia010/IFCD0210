@@ -1,10 +1,12 @@
 module.exports = (app) => {
-    const alumno = require("../controllers/alumno.controller.js");
+    const alumnos = require("../controllers/alumno.controller.js");
   
-    app.post("/alumno", alumno.create);
+    app.post("/alumno", alumnos.create);
+    
+    app.get("/alumno", alumnos.findAll);
   
-    app.put("/alumno/:idalumno", alumno.update);
+    app.put("/alumno/:idalumno", alumnos.update);
   
-    app.delete("/alumno/:idalumno", alumno.delete);
+    app.delete("/alumno/:idalumno", alumnos.delete);
   };
   

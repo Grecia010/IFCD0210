@@ -14,7 +14,7 @@ ORDER BY apellidos ASC, nombre DESC;
 
 --consulta 4
 
-SELECT MAX(pantalla)
+SELECT MIN(pantalla)
 FROM camara;
 
 --consulta 5

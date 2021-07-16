@@ -46,6 +46,17 @@ Alumno.updateById = (id, alumno, result) => {
   );
 };
 
+exports.findAll = (req, res) => {
+  Alumno.getAll((err, data) => {
+    if (err)
+      res.status(500).send({
+        message:
+          err.message || "Se produjo un error al recuperar apellidos.",
+      });
+    else res.send(data);
+  });
+};
+
 exports.delete = (req, res) => {
 Alumno.remove(req.params.idalumno, (err, data) => {
   if (err) {

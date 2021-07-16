@@ -14,8 +14,9 @@ ORDER BY apellidos ASC, nombre DESC;
 
 --consulta 4
 
-SELECT MIN(pantalla)
-FROM camara;
+select distinct panel
+FROM tv
+WHERE pantalla <= 21
 
 --consulta 5
 

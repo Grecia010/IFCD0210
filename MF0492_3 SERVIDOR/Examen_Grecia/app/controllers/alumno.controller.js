@@ -3,7 +3,7 @@ const Alumno = require("../models/alumno.model.js");
 exports.create = (req, res) => {
   if (!req.body) {
     res.status(400).send({
-      message: "¡No se puede conectar!",
+      message: "¡El contenido no puede estar vacío!",
     });
   }
 
@@ -55,9 +55,9 @@ Alumno.remove(req.params.idalumno, (err, data) => {
       });
     } else {
       res.status(500).send({
-        message: "No se pudo eliminar al Alumno con ID" + req.params.idalumno,
+        message: "No se pudo borrar al Alumno con ID" + req.params.idalumno,
       });
     }
-  } else res.send({ message: `¡El Alumno fue eliminado con exito!` });
+  } else res.send({ message: `¡El Alumno se eliminó correctamente!` });
 });
 };

@@ -21,7 +21,7 @@ WHERE pantalla <= 21
 --consulta 5
 
 SELECT codp, nombre FROM provincia
-WHERE NOT nombre='Cuenca';
+WHERE nombre NOT IN ('valladolid', 'burgos', 'madrid', 'cuenca');
 
 --consulta 6
 
